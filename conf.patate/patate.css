@@ -84,5 +84,6 @@ body {
     .modal-content {
         width: 90%; /* Adjust modal width for smaller screens */
         max-width: 90%; /* Ensure the modal does not exceed screen width */
+        margin-top: 20vh;
     }
 }
