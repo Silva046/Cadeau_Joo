@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nos souvenirs</title>
+        <link rel="stylesheet" href="cadeau.css">
+    </head>
+    <body>
+        <div class="grid">
+            <div class="grid-item square square1">
+                <a href="conf.chalet/Chalet.html">Chalet</a>
+            </div>
+            <div class="grid-item square square2">
+                <a href="conf.Nous_deux/Nous_deux.html">Nous deux</a>
+            </div>
+            <div class="grid-item square square3">
+                <a href="conf.patate/Patate.html">Patate</a>
+            </div>
+            <div class="grid-item square square4">
+                <a href="conf.photoshoot/Photoshoot.html">Photoshoot</a>
+            </div>
+            <div  class="grid-item square" onclick="openModal()">Secret</div>
+        </div>
+
+        <div id="passwordModal" class="modal" onclick="closeModal(event)">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <label for="password">Notre date YYYYmmdd:</label>
+                <input type="password" id="password" placeholder="Enter password">
+                <button onclick="checkPassword()">Submit</button>
+            </div>5
+        </div>
+
+        <script src="conf.secret/secret_password.js"></script>
+    </body>
+
+</html>

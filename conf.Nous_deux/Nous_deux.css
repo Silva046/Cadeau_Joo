@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the images */
+    gap: 10px; /* Space between images */
+}
+
+.gallery img {
+    max-width: 100%; /* Ensure images do not overflow their containers */
+    max-height: 100vh; /* Ensure images do not exceed viewport height */
+    object-fit: contain; /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    overflow: auto;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the images */
+        gap: 5px; /* Space between images */
+    }
+
+    .gallery img { 
+        max-width: 100%; /* Ensure images do not overflow their containers */ 
+        max-height: 26vh; /* Reduce the maximum height for smaller screens */ 
+        object-fit: contain; /* Ensure the entire photo is visible */ 
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .modal-content {
+        width: 90%; /* Adjust modal width for smaller screens */
+        max-width: 90%; /* Ensure the modal does not exceed screen width */
+    }
+}
